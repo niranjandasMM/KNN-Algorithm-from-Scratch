@@ -33,7 +33,7 @@ def knn(predict,data,k=3): # KNN Algo , a true real world example how maths help
   vote_result = Counter(votes).most_common()[0][0]
   return vote_result
 
-y_pred = 5.9,3,4.2,1.5 # = belongs to class 1(Versicolor) , we could have used Xtest , but you can use your own  way to test . try out taking features from the dataset .
+ypred = 5.9,3,4.2,1.5 # = belongs to class 1(Versicolor) , we could have used Xtest , but you can use your own  way to test . try out taking features from the dataset .
 knn(ypred,data,3)
 
  # Visualizing the data
