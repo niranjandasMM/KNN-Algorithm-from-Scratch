@@ -31,6 +31,7 @@ def knn(predict,data,k=3): # KNN Algo , a true real world example how maths help
   print(f"the votes are : {votes}")
 
   vote_result = Counter(votes).most_common()[0][0]
+  print(f'It belongs to class : {vote_result}')
   return vote_result
 
 ypred = 5.9,3,4.2,1.5 # = belongs to class 1(Versicolor) , we could have used Xtest , but you can use your own  way to test . try out taking features from the dataset .
