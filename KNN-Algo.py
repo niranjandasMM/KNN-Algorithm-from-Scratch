@@ -9,12 +9,12 @@ from collections import Counter
 from sklearn.model_selection  import train_test_split
 
 # Data manipulation in simple words , Convert the dataframe(or the csv) to a list of dictionaries , classes as key , it will be easier for programming .
-iris = pd.read_csv('/content/Iris - all-numbers.csv') # make sure to convert categoraical data to numerical , the csv file is in my repo in case if u need .
+# iris = pd.read_csv('/content/Iris - all-numbers.csv') # make sure to convert categoraical data to numerical , the csv file is in my repo in case if u need .
+iris = pd.read_csv('https://github.com/niranjandasMM/KNN-Algorithm-from-Scratch/blob/main/Iris-all-numbers.csv') 
 print(iris.head(4))
 iris = iris.values.tolist()
 
 data = defaultdict(list) # with deafultdict function , our main work is done . 
-#learn more about deafult dict at : https://www.educative.io/edpresso/learning-about-defaultdict-in-python
 
 for i in iris:
   data[i[-1]].append(i[:-1]) # adding the list values to our default list, take the class as first , which is last in the list so we put-1 and  by cutting -1 in apending the features, beacuase , the last value is our class(0,1,2), we only need features in last . 
